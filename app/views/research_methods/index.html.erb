@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Research Methods</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @research_methods.each do |research_method| %>
+      <tr>
+        <td><%= research_method.name %></td>
+        <td><%= link_to 'Show', research_method %></td>
+        <td><%= link_to 'Edit', edit_research_method_path(research_method) %></td>
+        <td><%= link_to 'Destroy', research_method, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Research method', new_research_method_path %>

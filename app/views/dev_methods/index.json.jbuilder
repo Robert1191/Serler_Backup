@@ -1,0 +1,1 @@
+json.array! @dev_methods, partial: 'dev_methods/dev_method', as: :dev_method

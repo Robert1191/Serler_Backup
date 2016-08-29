@@ -1,0 +1,1 @@
+json.array! @research_methods, partial: 'research_methods/research_method', as: :research_method

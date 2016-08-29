@@ -1,0 +1,2 @@
+module ResearchMethodsHelper
+end
