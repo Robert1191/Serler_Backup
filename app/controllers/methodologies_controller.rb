@@ -1,4 +1,4 @@
-class MethodologiesController < ApplicationController
+class MethodologiesController < BaseController
   before_action :set_methodology, only: [:show, :edit, :update, :destroy]
 
   # GET /methodologies

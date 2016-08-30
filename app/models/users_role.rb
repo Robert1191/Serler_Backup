@@ -1,7 +1,7 @@
 class UsersRole < ActiveRecord::Base
 
   # Trung - Define model associations
-  belongs_to :user
-  belongs_to :role
+  belongs_to :user, foreign_key: :user_id
+  belongs_to :role, foreign_key: :role_id
 
 end

@@ -1,4 +1,4 @@
-class ArticleTypesController < ApplicationController
+class ArticleTypesController < BaseController
   before_action :set_article_type, only: [:show, :edit, :update, :destroy]
 
   # GET /article_types

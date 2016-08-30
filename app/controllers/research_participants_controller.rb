@@ -1,4 +1,4 @@
-class ResearchParticipantsController < ApplicationController
+class ResearchParticipantsController < BaseController
   before_action :set_research_participant, only: [:show, :edit, :update, :destroy]
 
   # GET /research_participants

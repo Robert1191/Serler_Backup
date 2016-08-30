@@ -1,4 +1,4 @@
-class DevMethodsController < ApplicationController
+class DevMethodsController < BaseController
   before_action :set_dev_method, only: [:show, :edit, :update, :destroy]
 
   # GET /dev_methods

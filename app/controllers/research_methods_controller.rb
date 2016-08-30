@@ -1,4 +1,4 @@
-class ResearchMethodsController < ApplicationController
+class ResearchMethodsController < BaseController
   before_action :set_research_method, only: [:show, :edit, :update, :destroy]
 
   # GET /research_methods

@@ -9,7 +9,7 @@ Rails.application.config.assets.version = '1.0'
 # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
 Rails.application.config.assets.precompile += %w( home.css )
 Rails.application.config.assets.precompile += %w( article_types.css )
-Rails.application.config.assets.precompile += %w( article.css )
+Rails.application.config.assets.precompile += %w( articles.css )
 Rails.application.config.assets.precompile += %w( authors.css )
 Rails.application.config.assets.precompile += %w( dev_methods.css )
 Rails.application.config.assets.precompile += %w( feedbacks.css )
@@ -25,7 +25,7 @@ Rails.application.config.assets.precompile += %w( users.css )
 # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
 Rails.application.config.assets.precompile += %w( home.js )
 Rails.application.config.assets.precompile += %w( article_types.js )
-Rails.application.config.assets.precompile += %w( article.js )
+Rails.application.config.assets.precompile += %w( articles.js )
 Rails.application.config.assets.precompile += %w( authors.js )
 Rails.application.config.assets.precompile += %w( dev_methods.js )
 Rails.application.config.assets.precompile += %w( feedbacks.js )
