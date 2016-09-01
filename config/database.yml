@@ -36,13 +36,9 @@ development:
   host: ec2-54-225-89-110.compute-1.amazonaws.com
   pool: 5
   timeout: 5000
-<<<<<<< HEAD
-  username: postgres
-=======
   username: jmhimkqegephgy
   password: vEgGuyfHuc6FSVE31ms7ZhvHhA
-  port: 5432
->>>>>>> Robert_Branch
+  port: 5434
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
