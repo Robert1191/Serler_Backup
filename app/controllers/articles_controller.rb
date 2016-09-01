@@ -61,6 +61,11 @@ class ArticlesController < BaseController
     end
   end
 
+  # Search article from basic information
+  def basic_search
+    @articles = Article.where("volume = ? OR number = ? OR (? <= year AND year <= ?)", params[:article_volume], params[:article_issue], params[:from_year].to_i, params[:to_year].to_i)
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_article

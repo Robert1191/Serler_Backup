@@ -20,44 +20,51 @@
         </a>
       </div>
     </div>
-    <div class="ibox-content" style="display: block;">
-      <div class="well">
-        <form role="form " class="form-inline">
-          <div class="input-group col-md-3">
-            <input type="text" placeholder="Search" class="input-sm form-control">
-            <span class="input-group-btn">
-        <button type="submit" class="btn btn-sm btn-primary"> Search</button>
-        </span>
+    <div class="ibox-content">
+      <%= form_for :basic_search, url: '/basic_search', html: {class:'form-horizontal'} do %>
+        <div class="col-md-2">
+          <div class="form-group">
+            <input type="text" id="article_volume" name="article_volume" value="" placeholder="Volume" class="form-control">
           </div>
-          <div class="col-md-3">
-            <div class="form-group">
-              <label class="control-label" for="product_name">Volume</label>
-              <input type="text" id="article_volume" name="article_volume" value="" placeholder="Input Volume" class="form-control">
-            </div>
-          </div>
+        </div>
 
-          <div class="col-md-3">
-            <div class="form-group">
-              <label class="control-label" for="product_name">Issue</label>
-              <input type="text" id="article_issue" name="article_isse" value="" placeholder="Input Issue" class="form-control">
-            </div>
+        <div class="col-md-2">
+          <div class="form-group">
+            <input type="text" id="article_issue" name="article_issue" value="" placeholder="Issue" class="form-control">
           </div>
+        </div>
 
-          <div class="col-sm-3">
-            <div class="form-group">
-              <label class="control-label" for="product_name">Page</label>
-              <input type="text" id="article_page" name="article_page" value="" placeholder="Input Page Number" class="form-control">
-            </div>
+        <div class="col-md-2">
+          <div class="form-group">
+            <input type="text" id="article_page" name="from_year" value="" placeholder="From year" class="form-control">
           </div>
-        </form>
-      </div>
-    </div>
-    <div class="ibox-footer">
-      <i>Go to Advanced Search</i>
+        </div>
+
+        <div class="col-md-2">
+          <div class="form-group">
+            <input type="text" id="article_page" name="to_year" value="" placeholder="To year" class="form-control">
+          </div>
+        </div>
+
+        <div class="col-md-2">
+          <div class="form-group">
+            <input type="text" name="search_string" placeholder="Search" class="form-control">
+          </div>
+        </div>
+
+        <div class="input-group col-md-2">
+          <select class="form-control m-b" name="search_field">
+            <option value="0">All fields</option>
+            <option value="1">Title</option>
+            <option value="2">Author</option>
+            <option value="3">Abstract</option>
+            <option value="4">Keywords</option>
+          </select>
+          <span class="input-group-btn">
+            <button type="submit" class="btn btn-primary"> Search</button>
+          </span>
+        </div>
+      <% end %>
     </div>
   </div>
-
-
-
-
 </div>
