@@ -61,6 +61,11 @@ class ArticlesController < BaseController
     end
   end
 
+  # Search article from basic information
+  def basic_search
+    @methodologies = Methodology.all
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_article
