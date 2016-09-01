@@ -63,7 +63,7 @@ class ArticlesController < BaseController
 
   # Search article from basic information
   def basic_search
-    @methodologies = Methodology.all
+    @articles = Article.where("volume = ? OR number = ? OR (? <= year AND year <= ?)", params[:article_volume], params[:article_issue], params[:from_year].to_i, params[:to_year].to_i)
   end
 
   private
