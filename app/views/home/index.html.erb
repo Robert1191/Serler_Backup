@@ -1,4 +1,5 @@
 <div class="middle-box text-center loginscreen animated fadeInDown">
+  <%= csrf_meta_tags %>
   <div>
     <div>
 
@@ -10,18 +11,33 @@
       <!--Continually expanded and constantly improved Inspinia Admin Them (IN+)-->
     </p>
     <p>Login in. To see it in action.</p>
-    <form class="m-t" role="form" action="index.html">
+    <div>
+      <%= form_for(:session, url: login_path) do |f| %>
+
+          <%= f.email_field :email, class: 'form-control', placeholder: 'email' %>
+
+          <%= f.password_field :password, class: 'form-control', placeholder: 'password' %>
+
+          <%= f.submit "Log in", class: "btn btn-primary" %>
+      <% end %>
+
+
+    </div>
+    <form class="m-t" role="form" action="/login" method="post">
+
       <div class="form-group">
-        <input type="email" class="form-control" placeholder="Username" required="">
+        <input type="email" class="form-control" placeholder="email" required="true">
       </div>
       <div class="form-group">
-        <input type="password" class="form-control" placeholder="Password" required="">
+        <input type="password" class="form-control" placeholder="Password" required="true">
       </div>
+      <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
       <button type="submit" class="btn btn-primary block full-width m-b">Login</button>
+
 
       <a href="#"><small>Forgot password?</small></a>
       <p class="text-muted text-center"><small>Do not have an account?</small></p>
-      <a class="btn btn-sm btn-white btn-block" href="register.html">Create an account</a>
+      <a class="btn btn-sm btn-white btn-block" href="users/new.html">Create an account</a>
     </form>
     <p class="m-t"> <small>Inspinia we app framework base on Bootstrap 3 &copy; 2014</small> </p>
   </div>
