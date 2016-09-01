@@ -26,10 +26,6 @@
     <%= f.date_select :dob, {start_year: 100.years.ago.year, end_year: Date.today.year, default: Date.today}%><br>
     <%= f.label :affiliation %>
     <%= f.text_field :affiliation %><br>
-    <%= f.label :password %>
-    <%= f.password_field :password %><br>
-    <%= f.label :password_confirmation%>
-    <%= f.password_field :password_confirmation %>
 
   </div>
   <div class="actions">

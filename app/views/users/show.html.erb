@@ -1,9 +1,25 @@
 <p id="notice"><%= notice %></p>
+<% provide(:title, @user.first_name) %>
 
 <p>
   <strong>First name:</strong>
-  <%= @user.first_name %>
+  <%= @user.first_name %><br>
+  <strong>Middle name:</strong>
+  <%= @user.middle_name %><br>
+  <strong>Last name:</strong>
+  <%= @user.last_name %><br>
+  <strong>Email:</strong>
+  <%= @user.email %><br>
+  <strong>Gender:</strong>
+  <%= @user.gender %><br>
+  <strong>DOB:</strong>
+  <%= @user.dob %><br>
+  <strong>affiliation:</strong>
+  <%= @user.affiliation %>
+
+
 </p>
+
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>

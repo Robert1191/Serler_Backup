@@ -1,5 +1,12 @@
 class User < ActiveRecord::Base
 
+  # Athena - Add constraint to email: must be unique & validate (by email_validator.rb)
+  validates :email, uniqueness: true
+  validates :email, presence: true, email: true
+  validates_confirmation_of :password
+
+  #attr_accessor :password
+
   # Trung - Define model associations
   has_many :users_roles
   has_many :roles, through: :users_roles
@@ -7,7 +14,7 @@ class User < ActiveRecord::Base
   has_many :ratings
   has_many :articles, through: :ratings
 
-  #Quang attribute accessor
-  attr_accessor :first_name, :middle_name, :last_name, :email, :gender, :dob, :affiliation, :is_active
 
+
+  has_secure_password
 end
