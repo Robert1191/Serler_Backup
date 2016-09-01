@@ -15,6 +15,10 @@ Rails.application.routes.draw do
   resources :users
   root 'home#index'
 
+  get '/login', to: 'sessions#create'
+  post '/login', to: 'sessions#create'
+  delete '/logout', to: 'sessions#destroy'
+
   post '/basic_search' => 'articles#basic_search'
 
   # The priority is based upon order of creation: first created -> highest priority.
