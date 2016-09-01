@@ -57,6 +57,7 @@ ResearchParticipant.create(name: 'Undergraduate students', description: '', is_a
 ResearchParticipant.create(name: 'Postgraduate students',  description: '', is_active: true)
 ResearchParticipant.create(name: 'Practitioners',          description: '', is_active: true)
 
+<<<<<<< HEAD
 @author1 = Author.create(first_name: 'Indira', middle_name: '', last_name: 'Nurdiani', is_active: true)
 @author2 = Author.create(first_name: 'Jürgen', middle_name: '', last_name: 'Börstler', is_active: true)
 @author3 = Author.create(first_name: 'Samuel', middle_name: 'A.', last_name: 'Fricker', is_active: true)
@@ -209,3 +210,21 @@ ResearchParticipant.create(name: 'Practitioners',          description: '', is_a
                research_questions: '', research_metrics: '',
                type_id: '', status_id: '', is_active: true)
 @author26.articles << @article9
+
+ArticleType.create(name: 'Book',          description: '', is_active: true)
+ArticleType.create(name: 'Book article',          description: '', is_active: true)
+ArticleType.create(name: 'Junornal article',          description: '', is_active: true)
+ArticleType.create(name: 'Article in a periodical',          description: '', is_active: true)
+ArticleType.create(name: 'Conference proceesings',          description: '', is_active: true)
+ArticleType.create(name: 'Report',          description: '', is_active: true)
+ArticleType.create(name: 'Website',          description: '', is_active: true)
+ArticleType.create(name: 'Document from website',          description: '', is_active: true)
+ArticleType.create(name: 'Art',          description: '', is_active: true)
+ArticleType.create(name: 'Sound recording',          description: '', is_active: true)
+ArticleType.create(name: 'Performance',          description: '', is_active: true)
+ArticleType.create(name: 'Film',          description: '', is_active: true)
+ArticleType.create(name: 'Interview',          description: '', is_active: true)
+ArticleType.create(name: 'Patent',          description: '', is_active: true)
+ArticleType.create(name: 'Case',          description: '', is_active: true)
+ArticleType.create(name: 'Miscellaneous',          description: '', is_active: true)
+
