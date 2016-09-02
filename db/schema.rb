@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160828215258) do
+ActiveRecord::Schema.define(version: 20160902102309) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -112,6 +112,15 @@ ActiveRecord::Schema.define(version: 20160828215258) do
     t.datetime "updated_at",  null: false
   end
 
+  create_table "field_tables", force: :cascade do |t|
+    t.string   "name"
+    t.string   "field"
+    t.string   "table"
+    t.string   "join_table"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "methodologies", force: :cascade do |t|
     t.string   "name"
     t.text     "description"
@@ -149,6 +158,28 @@ ActiveRecord::Schema.define(version: 20160828215258) do
     t.string   "name"
     t.text     "description"
     t.boolean  "is_active"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "search_lines", force: :cascade do |t|
+    t.integer  "join_condition"
+    t.string   "field"
+    t.integer  "operator"
+    t.string   "value"
+    t.integer  "search_query_id"
+    t.boolean  "isActive"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
+  create_table "search_queries", force: :cascade do |t|
+    t.string   "description"
+    t.integer  "user_id"
+    t.date     "from_date"
+    t.date     "to_date"
+    t.text     "sql_string"
+    t.boolean  "isActive"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end

@@ -1,0 +1,16 @@
+<fieldset>
+  <div class="field">
+    <%= f.label :field %>
+    <%= f.text_field :field %>
+  </div>
+  <div class="field">
+    <%= f.label :operator %>
+    <%= f.text_field :operator %>
+  </div>
+  <div class="field">
+    <%= f.label :value %>
+    <%= f.text_field :value %>
+  </div>
+  <%= f.hidden_field :_destroy %>
+  <%= link_to "[remove]", '#', class: "remove_fields" %>
+</fieldset>

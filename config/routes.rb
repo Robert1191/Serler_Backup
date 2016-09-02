@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :search_queries
   get 'admin/article_view'
 
   resources :methodologies

@@ -6,6 +6,21 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+FieldTable.create(name: 'Method',            field: 'name',   table: 'dev_methods')
+FieldTable.create(name: 'Methodology',       field: 'name',   table: 'methodologies')
+FieldTable.create(name: 'Research Method',   field: 'name',   table: 'research_methods')
+FieldTable.create(name: 'Participant',       field: 'name',   table: 'research_participants')
+FieldTable.create(name: 'Title',             field: 'title',  table: 'articles')
+FieldTable.create(name: 'Author',            field: 'first_name, middle_name, last_name', table: 'authors')
+FieldTable.create(name: 'Abstract',          field: 'abstract', table: 'articles')
+FieldTable.create(name: 'Keyword',           field: 'keyword',  table: 'articles')
+FieldTable.create(name: 'Research Question', field: 'research_questions', table: 'articles')
+FieldTable.create(name: 'Volume',            field: 'volume',   table: 'articles')
+FieldTable.create(name: 'Number',            field: 'number',   table: 'articles')
+FieldTable.create(name: 'Journal',           field: 'journal',  table: 'articles')
+FieldTable.create(name: 'ISBN',              field: 'isbn',     table: 'articles')
+FieldTable.create(name: 'DOI',               field: 'doi',      table: 'articles')
+
 DevMethod.create(name: 'Test Driven Development',      description: '', is_active: true)
 DevMethod.create(name: 'Behaviour Driven Development', description: '', is_active: true)
 DevMethod.create(name: 'Pair programming',             description: '', is_active: true)
@@ -162,6 +177,7 @@ ResearchParticipant.create(name: 'Practitioners',          description: '', is_a
 @author16.articles << @article5
 @author17.articles << @article5
 @author18.articles << @article5
+@author18.articles << @article1
 
 @author19 = Author.create(first_name: 'S.', middle_name: 'L.R.', last_name: 'Vrhovec', is_active: true)
 @article6 = Article.create(title: 'Agile development of a hospital information system',
