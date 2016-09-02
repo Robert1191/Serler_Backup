@@ -17,4 +17,8 @@ class Article < ActiveRecord::Base
   belongs_to :status, foreign_key: :status_id
   belongs_to :article_type, foreign_key: :type_id
 
+  scope :by_volume, -> (volume) {
+    arel_table[:volume].eq(volume)
+  }
+
 end
