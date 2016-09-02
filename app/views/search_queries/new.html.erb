@@ -1,5 +1,35 @@
 <h1>New Search Query</h1>
 
 <%= render 'form' %>
+<select id="search_field" name="search_field">
+<% @search_fields.each do |search_field| %>
+
+      <option value="<%= search_field.id %>"><%= search_field.name %></option>
+<% end %>
+</select>
+
+<div id="value_field"></div>
 
 <%= link_to 'Back', search_queries_path %>
+
+<script type="text/javascript">
+  $(document).ready(function () {
+    $("#search_field").change(function () {
+      var index = Number($(this).val());
+      alert(index);
+      switch (index) {
+        case 1:
+        case 2:
+        case 3:
+        case 4:
+          $("#value_field").empty();
+          $("#value_field").append('<input type="text" />');
+          break;
+        default:
+          $("#value_field").empty();
+          $("#value_field").append('<input type="button" />');
+          break;
+      }
+    });
+  })
+</script>

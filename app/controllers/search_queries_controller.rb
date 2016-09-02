@@ -15,6 +15,7 @@ class SearchQueriesController < BaseController
   # GET /search_queries/new
   def new
     @search_query = SearchQuery.new
+    @search_fields = FieldTable.all
   end
 
   # GET /search_queries/1/edit
@@ -24,17 +25,17 @@ class SearchQueriesController < BaseController
   # POST /search_queries
   # POST /search_queries.json
   def create
-    @search_query = SearchQuery.new(search_query_params)
-
-    respond_to do |format|
-      if @search_query.save
-        format.html { redirect_to @search_query, notice: 'Search query was successfully created.' }
-        format.json { render :show, status: :created, location: @search_query }
-      else
-        format.html { render :new }
-        format.json { render json: @search_query.errors, status: :unprocessable_entity }
-      end
-    end
+    # @search_query = SearchQuery.new(search_query_params)
+    #
+    # respond_to do |format|
+    #   if @search_query.save
+    #     format.html { redirect_to @search_query, notice: 'Search query was successfully created.' }
+    #     format.json { render :show, status: :created, location: @search_query }
+    #   else
+    #     format.html { render :new }
+    #     format.json { render json: @search_query.errors, status: :unprocessable_entity }
+    #   end
+    # end
   end
 
   # PATCH/PUT /search_queries/1
