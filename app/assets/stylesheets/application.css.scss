@@ -9,15 +9,21 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
- *= require animate/animate.css
- *= require style
  *= require font-awesome
+ *= require bootstrap
  */
-
-.grey {
-  color:rgb(140,140,140);
+body {
+  padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
 }
 
-.geen {
-  color:rgb(26, 179, 148);
+.hero-spacer {
+  margin-top: 50px;
+}
+
+.hero-feature {
+  margin-bottom: 30px;
+}
+
+footer {
+  margin: 50px 0;
 }
