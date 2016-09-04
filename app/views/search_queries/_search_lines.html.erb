@@ -1,43 +1,47 @@
 <fieldset>
+  <div class="search_line">
     <div class="field">
-      <select class="search_field" name="search_field">
-        <% @search_fields.each do |search_field| %>
-            <option value="<%= search_field.id %>"><%= search_field.name %></option>
-        <% end %>
-      </select>
+      <%= f.collection_select(:search_query_id, @search_fields, :id, :name, {:prompt => '--Select---'}, {:class => 'search_field'}) %>
     </div>
 
     <div class="field">
       <%= f.label :operator %>
-      <%= f.text_field :operator %>
+      <!--<%= f.collection_select(:search_query_id, @search_fields, :id, :name, {:prompt => '&#45;&#45;Select-&#45;&#45;'}, {:class => 'search_field'}) %>-->
     </div>
 
     <div class="value_field"></div>
 
     <%= f.hidden_field :_destroy %>
     <%= link_to "[remove]", '#', class: "remove_fields" %>
+  </div>
 </fieldset>
 
 <script type="text/javascript">
   $(document).ready(function () {
     $(".search_field").change(function () {
-      //var search_line = $(this).parent(".field");
-      //var value_field = fieldset.find(".value_field");
-      alert($(this).val());
+      var search_line = $(this).parents(".search_line");
+      var value_field = search_line.children(".value_field");
       var index = Number($(this).val());
       switch (index) {
+        case 0:
+          value_field.empty();
+          break;
         case 1:
         case 2:
         case 3:
         case 4:
-          $(".value_field").empty();
-          $(".value_field").append('<input type="text" />');
+          value_field.empty();
+          value_field.append('<input type="text" />');
           break;
         default:
-          $(".value_field").empty();
-          $(".value_field").append('<button>Test</button>');
+          value_field.empty();
+          value_field.append('<button>Test</button>');
           break;
       }
     });
   })
 </script>
+
+
+
+
