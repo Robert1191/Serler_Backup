@@ -14,19 +14,13 @@ Rails.application.routes.draw do
   resources :research_participants
   resources :roles
   resources :users
-  root 'home#index'
 
-<<<<<<< HEAD
-  get    '/login',   to: 'sessions#create'
-  post   '/login',   to: 'sessions#create'
-  delete '/logout',  to: 'sessions#destroy'
-=======
+  root 'home#index'
   get '/login', to: 'sessions#create'
   post '/login', to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy'
 
   post '/basic_search' => 'articles#basic_search'
->>>>>>> bb5f27b2c0d1e64ab062ffb7c52d6320e5a8d7b3
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
