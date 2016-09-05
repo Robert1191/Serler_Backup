@@ -21,6 +21,9 @@ Rails.application.config.assets.precompile += %w( roles.css )
 Rails.application.config.assets.precompile += %w( statuses.css )
 Rails.application.config.assets.precompile += %w( users.css )
 Rails.application.config.assets.precompile += %w( admin.css )
+Rails.application.config.assets.precompile += %w( datatable.css )
+Rails.application.config.assets.precompile += %w( search_queries.css )
+
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
 Rails.application.config.assets.precompile += %w( home.js )
@@ -37,3 +40,4 @@ Rails.application.config.assets.precompile += %w( roles.js )
 Rails.application.config.assets.precompile += %w( statuses.js )
 Rails.application.config.assets.precompile += %w( users.js )
 Rails.application.config.assets.precompile += %w( admin.js )
+Rails.application.config.assets.precompile += %w( search_queries.js )
