@@ -201,8 +201,9 @@ ActiveRecord::Schema.define(version: 20160902102309) do
     t.date     "dob"
     t.string   "affiliation"
     t.boolean  "is_active"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.string   "password_digest"
   end
 
   create_table "users_roles", force: :cascade do |t|
