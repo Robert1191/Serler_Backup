@@ -51,5 +51,7 @@ group :development do
   # Dependency for windows
   gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
 
+  #added by Athena for users:password
+  gem 'bcrypt',         '3.1.11'
 end
 

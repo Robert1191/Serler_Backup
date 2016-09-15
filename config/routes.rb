@@ -1,7 +1,4 @@
 Rails.application.routes.draw do
-  resources :search_queries
-  get 'admin/article_view'
-
   resources :methodologies
   resources :dev_methods
   resources :research_methods
@@ -14,13 +11,12 @@ Rails.application.routes.draw do
   resources :research_participants
   resources :roles
   resources :users
-
   root 'home#index'
-  get '/login', to: 'sessions#create'
-  post '/login', to: 'sessions#create'
-  delete '/logout', to: 'sessions#destroy'
 
-  post '/basic_search' => 'articles#basic_search'
+  get    '/login',   to: 'sessions#create'
+  post   '/login',   to: 'sessions#create'
+  delete '/logout',  to: 'sessions#destroy'
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -30,6 +26,7 @@ Rails.application.routes.draw do
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
+
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
@@ -75,7 +72,4 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-  
-  get 'admin_controller/article_view'
-  
 end

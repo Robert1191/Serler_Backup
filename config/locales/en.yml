@@ -23,8 +23,3 @@ en:
   app: "SERLER"
   topnav:
     home: "Home"
-  search_article:
-    title: "Search Articles"
-    basic: "Basic Search"
-    advance: "Advanced Search"
-    result: "Search Results"

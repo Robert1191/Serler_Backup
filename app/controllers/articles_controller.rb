@@ -61,26 +61,6 @@ class ArticlesController < BaseController
     end
   end
 
-  # Search article from basic information
-  def basic_search
-    #@articles = Article.where("volume = ? OR number = ? OR (? <= year AND year <= ?)", params[:article_volume], params[:article_issue], params[:from_year].to_i, params[:to_year].to_i)
-    #@articles = Article.where (Article.article_by :title, 0, "practices").or Article.article_by :volume, 4, 77
-
-    tables = ["articles_authors", "authors"]
-
-    author = Object.const_get "Author"
-    article = Object.const_get "Article"
-
-    author_c = author.author_by "last_name", 0, "Camargo"
-    article_c = article.article_by "volume", 4, 119
-    con = author_c.and article_c
-
-    @articles = (article.joins(*tables.map(&:to_sym)).where con).uniq
-
-    #@articles = (Article.joins(ArticlesAuthor.arel_table).joins(Author.arel_table).where (Author.author_by :last_name, 0, "Camargo").and (Article.article_by :volume, 4, 119)).uniq
-    @sql = ((Article.joins(:articles_authors).joins(:authors).where (Author.author_by :last_name, 0, "Camargo").and (Article.article_by :volume, 4, 119)).uniq).to_sql
-  end
-
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_article
