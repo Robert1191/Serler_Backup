@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-
+# tesstf ksdajf lkajsl jasdlk jasldkfj lskdjf
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 
 gem 'momentjs-rails', '>= 2.9.0'
